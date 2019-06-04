@@ -1,7 +1,8 @@
-package com.zhouzhaodong.pagehelper.mapper;
+package com.zhouzhaodong.pagination.mapper;
 
-import com.zhouzhaodong.pagehelper.entity.Student;
+import com.zhouzhaodong.pagination.entity.Student;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
@@ -9,8 +10,9 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author jobob
- * @since 2019-06-03
+ * @since 2019-06-04
  */
+@Mapper
 public interface StudentMapper extends BaseMapper<Student> {
 
 }

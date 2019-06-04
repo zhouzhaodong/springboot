@@ -1,4 +1,4 @@
-package com.zhouzhaodong.pagehelper.config;
+package com.zhouzhaodong.pagination.config;
 
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;

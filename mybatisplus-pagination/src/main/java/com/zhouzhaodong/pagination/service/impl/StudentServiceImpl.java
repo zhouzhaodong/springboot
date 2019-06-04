@@ -1,11 +1,11 @@
-package com.zhouzhaodong.pagehelper.service.impl;
+package com.zhouzhaodong.pagination.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.zhouzhaodong.pagehelper.entity.Student;
-import com.zhouzhaodong.pagehelper.mapper.StudentMapper;
-import com.zhouzhaodong.pagehelper.service.IStudentService;
+import com.zhouzhaodong.pagination.entity.Student;
+import com.zhouzhaodong.pagination.mapper.StudentMapper;
+import com.zhouzhaodong.pagination.service.IStudentService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,17 +15,15 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author jobob
- * @since 2019-06-03
+ * @since 2019-06-04
  */
 @Service
 public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> implements IStudentService {
 
     @Override
-    public Object findList(Integer pageNo, Integer pageSize) {
-        IPage<Student> page = new Page<>(pageNo, pageSize);
+    public Object findList(IPage<Student> page) {
         QueryWrapper<Student> wrapper = new QueryWrapper<>();
         IPage<Student> userIPage = baseMapper.selectPage(page, wrapper);
         return userIPage;
     }
-
 }
