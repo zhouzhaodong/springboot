@@ -1,7 +1,6 @@
 package com.zhouxiaoxi.timingtasks.util;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
@@ -13,9 +12,8 @@ import java.util.Date;
  * @author zhouzhaodong
  */
 @Component
+@Slf4j
 public class TimingTasks {
-
-    private static final Logger logger = LoggerFactory.getLogger(TimingTasks.class);
 
     /**
      * 定时打印时间
@@ -24,7 +22,7 @@ public class TimingTasks {
     public void printCurrentTime(){
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String time = sdf.format(new Date());
-        logger.info("现在的时间为：{}",time);
+        log.info("现在的时间为：{}",time);
     }
 
 }
