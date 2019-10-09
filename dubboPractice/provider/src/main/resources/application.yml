@@ -1,0 +1,19 @@
+server:
+  port: 8082 #端口号
+
+dubbo:
+  application:
+    name: provider #当前服务/应用的名字
+#  scan:
+#    base-packages: com.zhouxiaoxi.provider.service.impl #开启包扫描，可替代 @EnableDubbo 注解
+
+  monitor:
+    protocol: registry #连接监控中心
+
+  protocol:
+    name: dubbo #通信协议
+    port: 20880 #接口
+
+  registry:
+    address: 127.0.0.1:2181 #注册中心的地址
+    protocol: zookeeper #注册中心的协议
