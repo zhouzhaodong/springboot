@@ -6,3 +6,4 @@
 ### 4. springboot使用mybatisplus自带的分页插件进行分页查询
 ### 5. springboot整合Redis
 ### 6. springboot使用定时任务 
+### 7. springboot通过Jpa进行数据库操作
