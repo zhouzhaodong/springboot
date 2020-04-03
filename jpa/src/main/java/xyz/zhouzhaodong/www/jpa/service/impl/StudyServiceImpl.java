@@ -58,6 +58,10 @@ public class StudyServiceImpl implements StudyService {
         return studyDao.findById(id);
     }
 
+    /**
+     * 查询所有
+     * @return
+     */
     @Override
     public List<Study> getStudyList() {
         return studyDao.findAll();

@@ -1,5 +1,5 @@
 spring:
   datasource:
-    url: jdbc:mysql://122.51.202.242:3306/test
-    username: root
-    password: 123456
+    url: jdbc:mysql://ip地址:端口号/数据库名称
+    username: 用户名
+    password: 密码
