@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>跨域测试-8080端口</title>
+</head>
+<body>
+    <button id="test">8080 -> 8081</button>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+    $("#test").click(function () {
+        $.ajax({
+            url: "http://localhost:8081/hello",
+            type: "post",
+            success:function (res) {
+                alert(res)
+            }
+        })
+    });
+</script>
+</html>
