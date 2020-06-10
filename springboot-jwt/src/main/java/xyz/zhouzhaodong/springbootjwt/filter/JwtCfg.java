@@ -16,8 +16,9 @@ public class JwtCfg {
         final FilterRegistrationBean<JwtFilter> registrationBean = new FilterRegistrationBean<>();
         registrationBean.setFilter(new JwtFilter());
         // 对/test/*下的url进行拦截验证
-        registrationBean.addUrlPatterns("/test/*");
-
+        registrationBean.addUrlPatterns("/**");
+        // 忽略某些url
+        registrationBean.addInitParameter("exclusions","/update/*,/login");
         return registrationBean;
     }
 
