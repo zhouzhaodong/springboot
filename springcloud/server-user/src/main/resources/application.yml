@@ -1,0 +1,16 @@
+#eureka-client
+#端口号
+server:
+  port: 8083
+
+eureka:
+  instance:
+    hostname: localhost
+  #置与Eureka Server交互的地址，查询服务和注册服务都需要依赖这个地址，默认是http://localhost:8761/eureka；多个地址可用，分隔
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: service-user
