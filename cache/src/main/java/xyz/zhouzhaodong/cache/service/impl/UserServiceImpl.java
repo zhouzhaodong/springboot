@@ -34,8 +34,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @CachePut(value = "user", key = "#user.id")
-    public void update(User user) {
-        userRepository.updateById(user.getId(), user.getName(), user.getAddress(), user.getAge());
+    public User update(User user) {
+        return userRepository.updateById(user.getId(), user.getName(), user.getAddress(), user.getAge());
     }
 
     @Override

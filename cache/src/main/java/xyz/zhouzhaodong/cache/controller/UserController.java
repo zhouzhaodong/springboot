@@ -28,8 +28,8 @@ public class UserController {
     }
 
     @RequestMapping("/update")
-    public void updateUser(User user){
-        userService.update(user);
+    public User updateUser(User user){
+        return userService.update(user);
     }
 
     @RequestMapping("/find")

@@ -17,15 +17,15 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 
     /**
      * 根据id更新
-     *
      * @param id
      * @param name
      * @param address
      * @param age
+     * @return
      */
     @Modifying
     @Query(value = "update user u set u.name = :name, u.address = :address, u.age = :age  where u.id = :id", nativeQuery = true)
-    void updateById(@Param("id") Integer id,
+    User updateById(@Param("id") Integer id,
                     @Param("name") String name,
                     @Param("address") String address,
                     @Param("age") int age);

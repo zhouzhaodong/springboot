@@ -29,7 +29,7 @@ public interface UserService {
      * @param user
      * @return
      */
-    void update(User user);
+    User update(User user);
 
     /**
      * 根据id查询
