@@ -1,0 +1,6 @@
+server:
+  port: 8888
+spring:
+  freemarker:
+    prefix: classpath:/templates/
+    suffix: .html
