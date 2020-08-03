@@ -20,13 +20,13 @@ public class MyWebsocketServer {
     /**
      * 存放所有在线的客户端
      */
-    private static final Map<String, Session> CLIENTS = new ConcurrentHashMap<>();
+    private static final Map<String, Session> clients = new ConcurrentHashMap<>();
 
     @OnOpen
     public void onOpen(Session session) {
         log.info("有新的客户端连接了: {}", session.getId());
         //将新用户存入在线的组
-        CLIENTS.put(session.getId(), session);
+        clients.put(session.getId(), session);
     }
 
     /**
@@ -37,7 +37,7 @@ public class MyWebsocketServer {
     public void onClose(Session session) {
         log.info("有用户断开了, id为:{}", session.getId());
         //将掉线的用户移除在线的组里
-        CLIENTS.remove(session.getId());
+        clients.remove(session.getId());
     }
 
     /**
@@ -64,7 +64,7 @@ public class MyWebsocketServer {
      * @param message 消息内容
      */
     private void sendAll(String message) {
-        for (Map.Entry<String, Session> sessionEntry : CLIENTS.entrySet()) {
+        for (Map.Entry<String, Session> sessionEntry : clients.entrySet()) {
             sessionEntry.getValue().getAsyncRemote().sendText(message);
         }
     }
