@@ -14,3 +14,4 @@
 ### 12. Spring Boot + ShardingSphere + JPA 实现读写分离
 ### 13. Spring Cloud项目的搭建
 ### 14. Spring Boot整合WebSocket实现双向通信
+### 15. Spring Boot整合xxl-job实现定时任务可视化调配
