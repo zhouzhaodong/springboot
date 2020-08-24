@@ -1,0 +1,8 @@
+server:
+  port: 9999 # 端口号
+spring:
+  # 数据库连接信息
+  datasource:
+    url: jdbc:mysql://IP地址:3306/jooq?useUnicode=true&characterEncoding=utf8
+    username: 用户名
+    password: 密码
