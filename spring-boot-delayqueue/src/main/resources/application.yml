@@ -1,0 +1,5 @@
+server:
+  port: 8888
+
+order:
+  isStarted: 1 # 是否开启自动取消功能（0关闭，1开启）
