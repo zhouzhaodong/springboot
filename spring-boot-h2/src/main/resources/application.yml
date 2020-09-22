@@ -1,0 +1,19 @@
+server:
+  port: 8888 # 端口号
+spring:
+  jpa:
+    show-sql: true # 启用SQL语句的日志记录
+    hibernate:
+      ddl-auto: update # 设置ddl模式
+  datasource:
+    driver-class-name: org.h2.Driver
+#    url： jdbc:h2:mem:h2 # 配置h2数据库连接地址（这里使用的是内存，下次启动数据就不存在了）
+    url: jdbc:h2:file:./db/h2;AUTO_SERVER=TRUE # 配置h2数据库连接地址（这里使用的是本地存储方式，下次启动数据还存在）
+    username: root # 配置数据库用户名
+    password: 123456 # 配置数据库密码
+  h2:
+    console:
+      path: /h2 # 进行该配置，你就可以通过YOUR_URL/h2访问h2 web consloe。YOUR_URL是你程序的访问URl
+      enabled: true # 配置程序开启时就会启动h2 web consloe
+      settings:
+        web-allow-others: true # 配置h2的远程访问
