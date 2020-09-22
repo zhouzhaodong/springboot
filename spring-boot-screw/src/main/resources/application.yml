@@ -1,0 +1,11 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://IP地址:3306/数据库名称
+    username: 用户名
+    password: 密码
+    xa:
+      properties:
+        useInformationSchema: true
