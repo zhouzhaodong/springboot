@@ -18,3 +18,4 @@
 ### 16. Spring Boot集成https
 ### 17. Spring Boot集成Swagger
 ### 18. Spring Boot集成DelayQueue实现订单到期自动取消
+### 19. Spring Boot 整合 screw 实现数据库文档自动生成
