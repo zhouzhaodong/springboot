@@ -20,3 +20,4 @@
 ### 18. Spring Boot集成DelayQueue实现订单到期自动取消
 ### 19. Spring Boot 整合 screw 实现数据库文档自动生成
 ### 20. Spring Boot 整合 H2
+### 21. Spring Boot 整合 UReport2
