@@ -1,0 +1,9 @@
+server:
+  port: 8888
+# 数据库链接 数据源配置
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://IP地址:3306/数据库名称?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&tinyInt1isBit=false&serverTimezone=GMT%2B8
+    username: 用户名
+    password: 密码
