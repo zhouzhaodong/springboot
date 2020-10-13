@@ -23,3 +23,4 @@
 ### 21. Spring Boot 整合 UReport2
 ### 22. Spring Boot 整合 Druid
 ### 23. Spring Boot 集成 WebService
+### 24. Spring Boot 集成 JApiDocs生成接口文档
