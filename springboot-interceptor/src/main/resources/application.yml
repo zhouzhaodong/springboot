@@ -1,0 +1,4 @@
+spring:
+  main:
+    # 当出现相同名字的类进行注册时，准许覆盖注册
+    allow-bean-definition-overriding: true
